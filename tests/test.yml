@@ -1,0 +1,6 @@
+# test file for insecure-platform-warning
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ../../
