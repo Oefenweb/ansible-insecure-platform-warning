@@ -10,6 +10,6 @@
     - python
     - curl
 
-- name: pre | update pip
+- name: pre | install pip
   shell: "curl -sL https://bootstrap.pypa.io/get-pip.py | python -"
   changed_when: false
