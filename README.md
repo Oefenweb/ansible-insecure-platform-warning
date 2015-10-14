@@ -6,7 +6,13 @@ Fixes the [InsecurePlatformWarning](https://urllib3.readthedocs.org/en/latest/se
 
 #### Requirements
 
-* `pip` (will not be installed)
+* `pip` (will not installed)
+
+* `python` (will be installed)
+* `python-dev` (will be installed)
+* `build-essential` (will be installed)
+* `libffi-dev` (will be installed)
+* `libssl-dev` (will be installed)
 
 #### Variables
 
@@ -15,6 +21,10 @@ None
 ## Dependencies
 
 None
+
+## Recommended
+
+* `ansible-pip` ([see](https://github.com/Oefenweb/ansible-pip)
 
 #### Example
 

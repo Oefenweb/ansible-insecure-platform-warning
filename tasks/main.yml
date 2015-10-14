@@ -17,8 +17,10 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - requests[security]
-    - urllib3[secure]
+    - pyOpenSSL
+    - ndg-httpsclient
+    - pyasn1
+    - certifi
   tags:
     - configuration
     - insecure-platform-warning
