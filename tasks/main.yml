@@ -12,6 +12,16 @@
     - insecure-platform-warning
     - insecure-platform-warning-dependencies
 
+- name: remove conflicting
+  apt:
+    name: "{{ item }}"
+    state: absent
+  with_items: insecure_platform_warning_conflicting
+  tags:
+    - configuration
+    - insecure-platform-warning
+    - insecure-platform-warning-conflicting
+
 - name: upgrade
   pip:
     name: "{{ item }}"
