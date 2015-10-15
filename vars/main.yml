@@ -6,3 +6,7 @@ insecure_platform_warning_dependencies:
   - build-essential
   - libffi-dev
   - libssl-dev
+
+insecure_platform_warning_pip_dependencies:
+  - requests[security]
+  - urllib3[secure]
