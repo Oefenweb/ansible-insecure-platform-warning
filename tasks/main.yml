@@ -25,12 +25,8 @@
 - name: upgrade
   pip:
     name: "{{ item }}"
-    state: present
-  with_items:
-    - pyOpenSSL
-    - ndg-httpsclient
-    - pyasn1
-    - certifi
+    state: latest
+  with_items: insecure_platform_warning_pip_dependencies
   tags:
     - configuration
     - insecure-platform-warning
