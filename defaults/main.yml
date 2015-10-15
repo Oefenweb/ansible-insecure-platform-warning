@@ -1,2 +1,3 @@
 # defaults file for insecure-platform-warning
 ---
+insecure_platform_warning_conflicting: []

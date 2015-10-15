@@ -16,7 +16,7 @@ Fixes the [InsecurePlatformWarning](https://urllib3.readthedocs.org/en/latest/se
 
 #### Variables
 
-None
+* `insecure_platform_warning_conflicting` [default: `[]`]: Conflicting packages to remove (e.g. `[python-openssl]`)
 
 ## Dependencies
 
