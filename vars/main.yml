@@ -1,0 +1,8 @@
+# vars file for insecure-platform-warning
+---
+insecure_platform_warning_dependencies:
+  - python
+  - python-dev
+  - build-essential
+  - libffi-dev
+  - libssl-dev

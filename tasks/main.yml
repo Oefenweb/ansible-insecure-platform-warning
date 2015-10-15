@@ -1,0 +1,27 @@
+# tasks file for insecure-platform-warning
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: true
+    cache_valid_time: 3600
+  with_items: insecure_platform_warning_dependencies
+  tags:
+    - configuration
+    - insecure-platform-warning
+    - insecure-platform-warning-dependencies
+
+- name: upgrade
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - pyOpenSSL
+    - ndg-httpsclient
+    - pyasn1
+    - certifi
+  tags:
+    - configuration
+    - insecure-platform-warning
+    - insecure-platform-warning-upgrade
