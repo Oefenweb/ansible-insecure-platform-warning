@@ -1,33 +1,16 @@
 # tasks file for insecure-platform-warning
 ---
-- name: install dependencies
-  apt:
-    name: "{{ item }}"
-    state: latest
-    update_cache: true
-    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: insecure_platform_warning_dependencies
+- name: get python version
+  shell: python --version 2>&1 | awk '{print $2}'
+  register: _python_version
+  changed_when: false
   tags:
     - configuration
     - insecure-platform-warning
-    - insecure-platform-warning-dependencies
+    - insecure-platform-warning-get-python-version
 
-- name: remove conflicting
-  apt:
-    name: "{{ item }}"
-    state: absent
-  with_items: insecure_platform_warning_conflicting
+- include: fix.yml
+  when: _python_version.stdout | version_compare('2.7.9', '<')
   tags:
     - configuration
     - insecure-platform-warning
-    - insecure-platform-warning-conflicting
-
-- name: upgrade
-  pip:
-    name: "{{ item }}"
-    state: latest
-  with_items: insecure_platform_warning_pip_dependencies
-  tags:
-    - configuration
-    - insecure-platform-warning
-    - insecure-platform-warning-upgrade

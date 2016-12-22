@@ -1,0 +1,27 @@
+# tasks file for insecure-platform-warning
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: "{{ insecure_platform_warning_dependencies }}"
+  tags:
+    - insecure-platform-warning-dependencies
+
+- name: remove conflicting
+  apt:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ insecure_platform_warning_conflicting }}"
+  tags:
+    - insecure-platform-warning-conflicting
+
+- name: upgrade
+  pip:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ insecure_platform_warning_pip_dependencies }}"
+  tags:
+    - insecure-platform-warning-upgrade
