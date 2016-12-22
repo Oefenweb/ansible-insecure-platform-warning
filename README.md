@@ -1,6 +1,6 @@
 ## insecure-platform-warning
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-insecure-platform-warning.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-insecure-platform-warning) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-insecure--platform--warning-blue.svg)](https://galaxy.ansible.com/list#/roles/5574)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-insecure-platform-warning.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-insecure-platform-warning) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-insecure--platform--warning-blue.svg)](https://galaxy.ansible.com/tersmitten/insecure-platform-warning)
 
 Fixes the [InsecurePlatformWarning](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning) in Debian-like systems.
 
