@@ -22,4 +22,3 @@
     state: latest
   tags:
     - insecure-platform-warning-upgrade
-    - skip_ansible_lint
