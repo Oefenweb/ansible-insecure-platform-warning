@@ -1,17 +1,7 @@
 # tasks file for insecure-platform-warning
 ---
-- name: get python version
-  shell: >
-    python --version 2>&1 | awk '{print $2}'
-  register: _python_version
-  changed_when: false
-  tags:
-    - configuration
-    - insecure-platform-warning
-    - insecure-platform-warning-get-python-version
-
 - include: fix.yml
-  when: _python_version.stdout is version('2.7.9', '<')
+  when: ansible_python_version is version('2.7.9', '<')
   tags:
     - configuration
     - insecure-platform-warning
