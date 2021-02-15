@@ -13,5 +13,5 @@
   shell: >
     curl -sL https://bootstrap.pypa.io/get-pip.py | python -
   args:
-      warn: false
+    warn: false
   changed_when: false
