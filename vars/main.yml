@@ -1,4 +1,4 @@
-# vars file for insecure-platform-warning
+# vars file
 ---
 insecure_platform_warning_dependencies:
   - python

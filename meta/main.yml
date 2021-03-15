@@ -1,6 +1,7 @@
-# meta file for insecure-platform-warning
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: insecure-platform-warning
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

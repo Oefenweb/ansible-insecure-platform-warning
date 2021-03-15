@@ -1,4 +1,4 @@
-# tasks file for insecure-platform-warning
+# tasks file
 ---
 - include: fix.yml
   when: ansible_python_version is version('2.7.9', '<')

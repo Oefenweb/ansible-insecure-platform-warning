@@ -1,4 +1,4 @@
-# test file for insecure-platform-warning
+# test file
 ---
 - hosts: localhost
   connection: local
