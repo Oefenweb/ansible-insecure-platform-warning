@@ -2,7 +2,7 @@
 ---
 galaxy_info:
   namespace: oefenweb
-  role_name: insecure-platform-warning
+  role_name: insecure_platform_warning
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Fixes the InsecurePlatformWarning in Debian-like systems
