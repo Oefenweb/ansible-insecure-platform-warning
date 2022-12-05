@@ -9,9 +9,7 @@
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
 
-- name: pre | install pip
+- name: pre | install pip  # noqa command-instead-of-module
   shell: >
     curl -sL https://bootstrap.pypa.io/pip/2.7/get-pip.py | python -
-  args:
-    warn: false
   changed_when: false
