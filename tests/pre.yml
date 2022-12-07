@@ -1,7 +1,7 @@
 # pre test file
 ---
 - name: pre | install dependencies
-  apt:
+  ansible.builtin.apt:
     name:
       - python
       - curl
@@ -10,6 +10,6 @@
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
 
 - name: pre | install pip  # noqa command-instead-of-module
-  shell: >
+  ansible.builtin.shell: >
     curl -sL https://bootstrap.pypa.io/pip/2.7/get-pip.py | python -
   changed_when: false

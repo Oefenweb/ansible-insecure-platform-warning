@@ -4,6 +4,7 @@
   remote_user: vagrant
   become: true
   pre_tasks:
-    - include: pre.yml
+    - name: pre
+      ansible.builtin.import_tasks: pre.yml
   roles:
     - ../../
