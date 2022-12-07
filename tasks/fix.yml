@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: install dependencies
-  apt:
+  ansible.builtin.apt:
     name: "{{ insecure_platform_warning_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -10,14 +10,14 @@
     - insecure-platform-warning-dependencies
 
 - name: remove conflicting
-  apt:
+  ansible.builtin.apt:
     name: "{{ insecure_platform_warning_conflicting }}"
     state: absent
   tags:
     - insecure-platform-warning-conflicting
 
 - name: upgrade
-  pip:
+  ansible.builtin.pip:
     name: "{{ insecure_platform_warning_pip_dependencies }}"
     state: latest
   tags:
