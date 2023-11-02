@@ -33,7 +33,7 @@ None
 ---
 - hosts: all
   roles:
-    - insecure-platform-warning
+    - oefenweb.insecure-platform-warning
 ```
 
 #### License
