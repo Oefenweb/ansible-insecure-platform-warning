@@ -7,7 +7,7 @@ Fixes the [InsecurePlatformWarning](https://urllib3.readthedocs.org/en/latest/se
 
 #### Requirements
 
-* `pip` (will not installed)
+* `pip` (will not be installed)
 
 * `python` (will be installed)
 * `python-dev` (will be installed)
