@@ -2,7 +2,7 @@
 ---
 - name: fix
   ansible.builtin.import_tasks: fix.yml
-  when: ansible_python_version is version('2.7.9', '<')
+  when: ansible_facts['python_version'] is version('2.7.9', '<')
   tags:
     - configuration
     - insecure-platform-warning
