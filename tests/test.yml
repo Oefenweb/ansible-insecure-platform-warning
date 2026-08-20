@@ -5,7 +5,7 @@
   connection: local
   become: true
   pre_tasks:
-    - name: pre
-      ansible.builtin.import_tasks: pre.yml
+    - name: include tasks
+      ansible.builtin.import_tasks: "{{ playbook_dir }}/tasks/pre.yml"
   roles:
     - ../../
